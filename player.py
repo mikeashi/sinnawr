@@ -18,7 +18,7 @@ class RandomPlayer(Player):
         return 'RandomPlayer'
 
 
-class sinnawr(Player):
+class Sinnawr(Player):
     def get_next_move(self,board):
         return random.choice([m for m in board.legal_moves])
     
