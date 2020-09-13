@@ -12,7 +12,7 @@ class Player:
 
 class RandomPlayer(Player):
     def get_next_move(self,board:chess.Board):
-        yield random.choice([m for m in board.legal_moves])
+        return random.choice([m for m in board.legal_moves])
     
     def get_name(self):
         return 'RandomPlayer'
@@ -20,7 +20,7 @@ class RandomPlayer(Player):
 
 class sinnawr(Player):
     def get_next_move(self,board):
-        yield random.choice([m for m in board.legal_moves])
+        return random.choice([m for m in board.legal_moves])
     
     def get_name(self):
         return 'Sinnawr'
