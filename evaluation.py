@@ -123,5 +123,5 @@ def whitePieceSquareScore(board:chess.Board):
 def blackPieceSquareScore(board:chess.Board):
     score = 0
     for pieceType in mpst:
-        score= score + sum([-mpst[pieceType][chess.square_mirror(i)] for i in board.pieces(pieceType, chess.BLACK)])
+        score= score + sum([mpst[pieceType][chess.square_mirror(i)] for i in board.pieces(pieceType, chess.BLACK)])
     return score
