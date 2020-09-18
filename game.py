@@ -20,7 +20,9 @@ class Game:
                 move = self.white.get_next_move(self.board)
             else:
                 move = self.black.get_next_move(self.board)
-            self.board.push(move)            
+            self.board.push(move)
+            print('-------------------------------------')
+            print(self.board)            
             node = node.add_variation(move)
 
         game.headers["Result"] = self.board.result()
