@@ -8,6 +8,7 @@ class Game:
         self.board = chess.Board()
         self.white = white
         self.black = black
+        self.history = []
     
     def play(self):
         game = chess.pgn.Game()
@@ -21,8 +22,8 @@ class Game:
             else:
                 move = self.black.get_next_move(self.board)
             self.board.push(move)
-            print('-------------------------------------')
-            print(self.board)            
+            self.history.append(move)
+            print(game)    
             node = node.add_variation(move)
 
         game.headers["Result"] = self.board.result()

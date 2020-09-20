@@ -1,4 +1,5 @@
-from player import Player,RandomPlayer,Sinnawr
+from player import Player,RandomPlayer
+from sinnawr import Sinnawr
 from game import Game
 import chess
 
